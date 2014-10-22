@@ -41,14 +41,14 @@ Dans le cas particulier de l'écoulement étudié, on a :
 \label{eq:modal}
 \end{equation}
 
-Les équations de Stokes étant vérifiées par l'écoulement de base, les équations s'écrivent :
+Les équations de Navier-Stokes étant vérifiées par l'écoulement de base, les équations pour les perturbations s'écrivent :
 
 \begin{equation}
 \begin{cases}
 \px{u}+\py{v}+\pz{w}=0\\
 \pt{u}+\overline{U}\px{u}+v\py{\overline{U}} + \frac{1}{\rho}\px{p} = \nu\left(\pxx{u}+\pyy{u}+\pzz{u}\right)\\
 \pt{v}+\overline{U}\px{v} + \frac{1}{\rho}\py{p} = \nu\left(\pxx{v}+\pyy{v}+\pzz{v}\right)\\
-\pt{w}+\overline{U}\px{w} + \frac{1}{\rho}\py{p} = \nu\left(\pxx{w}+\pyy{w}+\pzz{w}\right)
+\pt{w}+\overline{U}\px{w} + \frac{1}{\rho}\pz{p} = \nu\left(\pxx{w}+\pyy{w}+\pzz{w}\right)
 \end{cases}
 \label{eq:perturb1}
 \end{equation}
@@ -57,8 +57,29 @@ Avec la substitution de la forme modale, on obtient :
 
 \begin{equation}
 \begin{cases}
-i\alpha\hat{u}+\frac{\hat{v}}{dy}+i\alpha\hat{w}=0
+i\alpha\hat{u}+\frac{d\hat{v}}{dy}+i\beta\hat{w}=0\\
+
+-i\omega\hat{u}+\overline{U}i\alpha\hat{u}+\hat{v}\frac{d\overline{U}}{dy}+\frac{1}{\rho}i\alpha\hat{p} = \nu\left(\frac{d^2\hat{u}}{dy^2}-(\alpha^2+\beta^2)\hat{u}\right)\\
+
+-i\omega\hat{v}+\overline{U}i\alpha\hat{v}+\frac{1}{\rho}\frac{d\hat{p}}{dy} = \nu\left(\frac{d^2\hat{v}}{dy^2}-(\alpha^2+\beta^2)\hat{v}\right)\\
+
+-i\omega\hat{w}+\overline{U}i\alpha\hat{w}+\frac{1}{\rho}i\beta\hat{p} = \nu\left(\frac{d^2\hat{w}}{dy^2}-(\alpha^2+\beta^2)\hat{w}\right)
 \end{cases}
 \label{eq:perturb2}
 \end{equation}
+
+Dans les équations de conservation de quantité de mouvement, on adopte la procédure :
+\begin{itemize}
+\item On multiplie la composante en x par \(\beta\) et on dérive par rapport à y ;
+\item On multiplie la composante en y par \(i\alpha\beta\) ;
+\item On multiplie la composante en z par \(\alpha\) et on dérive par rapport à y.
+\end{itemize}
+
+Ainsi,
+
+%\begin{equation}
+
+%\label{eq:perturb3}
+%\end{equation}
+
 \end{document}
