@@ -86,8 +86,15 @@ Ainsi, on trouve :
 \label{eq:perturb3}
 \end{equation}
 
-Si prend la somme de ces trois équations, tenu compte de l'équation de continuité en \ref{eq:perturb2}, on arrive à :
+Si on prend la somme de ces trois équations, tenu compte de l'équation de continuité en \ref{eq:perturb2}, on arrive à :
 
+\begin{equation}
+-(\alpha\overline{U}-\omega)\frac{d^2\hat{v}}{dy^2}+\alpha\hat{v}\frac{d^2\overline{U}}{dy^2}+(\alpha\overline{U}-\omega)(\alpha^2+\beta^2)\hat{v} =
+ i\nu\frac{d}{dy}\left[\frac{d^3\hat{v}}{dy^3}-(\alpha^2+\beta^2)\frac{d\hat{v}}{dy}\right]+i\nu(\alpha^2+\beta^2)^2\hat{v}-i\nu(\alpha^2+\beta^2)\frac{d^2\hat{v}}{dy^2}
+\label{eq:vpert1}
+\end{equation}
 
+Après quelques manipulations :
+\[i\nu\left(\frac{d^2}{dy^2}-(\alpha^2+\beta^2)^2\right)^2 \hat{v}+\left(\alpha\overline{U}-\omega\right)\left(\frac{d^2}{dy^2}-(\alpha^2+\beta^2)\right)\hat{v}-\alpha\frac{d^2\overline{U}}{dy^2}\hat{v}=0\]
 
 \end{document}
