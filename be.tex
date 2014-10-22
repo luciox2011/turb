@@ -68,18 +68,26 @@ i\alpha\hat{u}+\frac{d\hat{v}}{dy}+i\beta\hat{w}=0\\
 \label{eq:perturb2}
 \end{equation}
 
-Dans les équations de conservation de quantité de mouvement, on adopte la procédure :
+Dans les équations de conservation de quantité de mouvement, la procédure est la suivante :
 \begin{itemize}
-\item On multiplie la composante en x par \(\beta\) et on dérive par rapport à y ;
-\item On multiplie la composante en y par \(i\alpha\beta\) ;
-\item On multiplie la composante en z par \(\alpha\) et on dérive par rapport à y.
+\item On dérive les équations en x et z par rapport à y ;
+\item puis on multiplie l'équation en x par \(\alpha\) et l'équation en z par \(\beta\) ;
+\item finalement on multiplie l'équation en y par -\(i(\alpha+\beta)\).
 \end{itemize}
 
-Ainsi,
+Ainsi, on trouve :
 
-%\begin{equation}
+\begin{equation}
+\begin{cases}
+\frac{d}{dy}\left[(-\omega+\overline{U}\alpha)i\alpha\hat{u}+\alpha\hat{v}\frac{d\overline{U}}{dy}\right]+\frac{i\alpha^2}{\rho}\frac{d\hat{p}}{dy}=\nu\frac{d}{dy}\left[\frac{d^2}{dy^2}(\alpha\hat{u})-(\alpha^2+\beta^2)\alpha\hat{u}\right]\\
+(-\omega+\overline{U}\alpha)(\alpha^2+\beta^2)\hat{v} -\frac{i(\alpha^2+\beta^2)}{\rho}\frac{d\hat{p}}{dy}=-i(\alpha^2+\beta^2)\nu\left(\frac{d^2\hat{v}}{dy^2}-(\alpha^2+\beta^2)\hat{v}\right)\\
+\frac{d}{dy}\left[(-\omega+\overline{U}\alpha)i\beta\hat{w}\right]+\frac{i\beta^2}{\rho}\frac{d\hat{p}}{dy}=\nu\frac{d}{dy}\left[\frac{d^2}{dy^2}(\beta\hat{w})-(\alpha^2+\beta^2)\beta\hat{w}\right]
+\end{cases}
+\label{eq:perturb3}
+\end{equation}
 
-%\label{eq:perturb3}
-%\end{equation}
+Si prend la somme de ces trois équations, tenu compte de l'équation de continuité en \ref{eq:perturb2}, on arrive à :
+
+
 
 \end{document}
