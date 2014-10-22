@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt]{article}
+\documentclass[a4paper,11pt]{article}
 
 \usepackage[french]{babel}
 \usepackage[latin1]{inputenc}
@@ -17,6 +17,12 @@
 
 \newcommand{\pt}[1]{\frac{\partial #1}{\partial t}}
 \newcommand{\px}[1]{\frac{\partial #1}{\partial x}}
+\newcommand{\py}[1]{\frac{\partial #1}{\partial y}}
+\newcommand{\pz}[1]{\frac{\partial #1}{\partial z}}
+
+\newcommand{\pxx}[1]{\frac{\partial^2 #1}{\partial x^2}}
+\newcommand{\pyy}[1]{\frac{\partial^2 #1}{\partial y^2}}
+\newcommand{\pzz}[1]{\frac{\partial^2 #1}{\partial z^2}}
 
 \begin{document}
 \maketitle
@@ -29,4 +35,30 @@ Le problème étudié est l'écoulement de Poiseuille incompressible sujet à une per
 \label{eq:decomp}
 \end{equation}
 
+Dans le cas particulier de l'écoulement étudié, on a :
+\begin{equation}
+\begin{pmatrix}U\\V\\W\\P\end{pmatrix} = \begin{pmatrix}\overline{U}(y)\\0\\0\\\overline{P}\end{pmatrix} + \mathrm{exp}\;i(\alpha x + \beta z - \omega t)\cdot\begin{pmatrix}\hat{u}(y)\\\hat{v}(y)\\\hat{w}(y)\\\hat{p}(y)\end{pmatrix}
+\label{eq:modal}
+\end{equation}
+
+Les équations de Stokes étant vérifiées par l'écoulement de base, les équations s'écrivent :
+
+\begin{equation}
+\begin{cases}
+\px{u}+\py{v}+\pz{w}=0\\
+\pt{u}+\overline{U}\px{u}+v\py{\overline{U}} + \frac{1}{\rho}\px{p} = \nu\left(\pxx{u}+\pyy{u}+\pzz{u}\right)\\
+\pt{v}+\overline{U}\px{v} + \frac{1}{\rho}\py{p} = \nu\left(\pxx{v}+\pyy{v}+\pzz{v}\right)\\
+\pt{w}+\overline{U}\px{w} + \frac{1}{\rho}\py{p} = \nu\left(\pxx{w}+\pyy{w}+\pzz{w}\right)
+\end{cases}
+\label{eq:perturb1}
+\end{equation}
+
+Avec la substitution de la forme modale, on obtient :
+
+\begin{equation}
+\begin{cases}
+i\alpha\hat{u}+\frac{\hat{v}}{dy}+i\alpha\hat{w}=0
+\end{cases}
+\label{eq:perturb2}
+\end{equation}
 \end{document}
